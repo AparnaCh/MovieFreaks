@@ -1,0 +1,32 @@
+CREATE TABLE registered_users( 
+firstname VARCHAR(30) NOT NULL, 
+lastname VARCHAR(30) NOT NULL, 
+username VARCHAR(30) PRIMARY KEY, 
+password VARCHAR(50) NOT NULL, 
+email VARCHAR(50) DEFAULT NULL, 
+dob DATE DEFAULT NULL, 
+gender VARCHAR(6) NOT NULL, 
+newmoviealert VARCHAR(3) NOT NULL, 
+phone NUMERIC(20) DEFAULT NULL, 
+zipcode NUMERIC(10) DEFAULT NULL) 
+
+CREATE TABLE zipcode_movies (
+zipcode NUMERIC(10) NOT NULL,
+movies VARCHAR(100) NOT NULL,
+PRIMARY KEY (zipcode,movies)
+)
+
+CREATE TABLE new_releases (
+zipcode NUMERIC(10) NOT NULL,
+movies VARCHAR(100) NOT NULL,
+entdate TIMESTAMP,
+PRIMARY KEY (zipcode,movies)
+)
+
+CREATE TABLE theatres (
+zipcode	int(10),
+movies	varchar(100),
+theatre	varchar(100),
+showtime varchar(20),
+ticketurl varchar(250)
+)
