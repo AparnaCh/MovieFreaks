@@ -17,7 +17,7 @@
 <?php
 
 //Connection to database
-$con = mysqli_connect("localhost","username" ,"password","database");
+$con = mysqli_connect("localhost","username" ,"password","databa");
 if (!$con){     
   die('Could not connect: ' . mysql_error());     
 } 
