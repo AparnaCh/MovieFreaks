@@ -61,3 +61,14 @@ Source Code
 =========
 The source code can be found at - https://github.com/AparnaCh/MovieFreaks
 
+Build/Install Instruction:
+==================
+Click on the link below to find Build/Install Instructions
+https://github.com/AparnaCh/MovieFreaks/tree/master/Docs/BuildInstallInstructions.pdf
+API key genaration instructions are available at
+https://github.com/AparnaCh/MovieFreaks/tree/master/Docs/APIkeyGeneration.pdf
+
+User Manual
+============
+User Manual is available at 
+https://github.com/AparnaCh/MovieFreaks/tree/master/Docs/UserManual.pdf
