@@ -1,3 +1,19 @@
+<!-- ********************************************************************************************
+ * Copyright (C) 2014 Aparna Chandrasekar
+ *
+ * This program is free software: you can redistribute it and/or modify it under 
+ * the terms of the GNU General Public License as published by the Free Software Foundation, 
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program. 
+ * If not, see http://www.gnu.org/licenses/.
+ *
+ *  ******************************************************************************************/ -->
+
 <html>
 	<head>
 		<title> MovieFreaks </title>
@@ -11,7 +27,7 @@
 		    border: 0px solid #197575;
 	        }
 	        div.header {
-		    background:url(http://thumbs.dreamstime.com/z/red-christmas-background-shiny-stars-35348908.jpg);
+		    background:img.jpg;
       	    text-align:center;
 		    width:100%;
 		    top:0px;
@@ -73,6 +89,12 @@
 			color:#FFFF4D;font-size:24px;
 			text-shadow:5px 5px 5px #FF6600;
 		   }
+		   font.zip{
+			font-weight:bold;
+			color:#990000;
+			font-family:monotype corsiva;
+			font-size:20pt;
+		   }
 		   td.tabs {             
 		    border-radius:7px;
 		    background-color:#33CCCC;
@@ -107,11 +129,11 @@
 	<div class="tab">
 	     <table style="margin:auto;text-align:center;">
 		  <tr>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/movies.php">Movies</a></td>
-	     	     <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/theatres.php">Theatres</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/search.php">Search</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/register.php">Register</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/about.php">About Us</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/movies.php">Movies</a></td>
+	     	     <td class="tabs"><a class="tabs" href="http://localhost/Movies/theatres.php">Theatres</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/search.php">Search</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/register.php">Register</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/about.php">About Us</a></td>
 		  </tr>
 	     </table>
 	</div>
@@ -124,7 +146,7 @@
 		 <font class="scrolltext">Entertainment Unlimited!</font><p>
 		 <font class="scrolltext">Never miss a movie</font><p>
 		 <marquee behavior="alternate" scrollamount="10" direction="up" height="23px"><center>       
-		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost:8000/Movies/register.php">REGISTER NOW!!</a></font><br>
+		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost/Movies/register.php">REGISTER NOW!!</a></font><br>
 		 </center></marquee>
 		 <font class="scrolltext">And receive SMS Alerts on new movies</font><p>
 		 <font class="scrolltext">Find your favorite movies in theatres near you</font><p>
@@ -139,10 +161,11 @@
 		<?php
 		$movie = $_GET['movie'];
 		$zipcode = $_GET['zip'];
+		$radius = $_GET['radius'];
 		date_default_timezone_set('America/Los_Angeles');
 		$startdate = date('Y-m-d');
 
-		$request = "http://data.tmsapi.com/v1/movies/showings?startDate=".$startdate."&zip=".$zipcode."&radius=5&api_key=hqjdwecaz5rh2y7m2n7a8yw4";
+		$request = "http://data.tmsapi.com/v1/movies/showings?startDate=".$startdate."&zip=".$zipcode."&radius=".$radius."&api_key=yourapikey";
 		$response  = file_get_contents($request);
 		$movielist = json_decode($response,true);                               
 		$arrlen = sizeof($movielist);
@@ -152,7 +175,7 @@
 		      echo "<p style=\"font-size:35px;font-weight:bold;color:#990000;\">".$movielist[$i]['title']."</p>";
 
 			 if (isset($movielist[$i]['releaseDate'])){
-			      echo "<br><span class=\"big\">Release Date: </span>".$movielist[$i]['releaseDate'];
+			      echo "<span class=\"big\">Release Date: </span>".$movielist[$i]['releaseDate'];
 			 }	
 			 if (isset($movielist[$i]['runTime'])){
 		      	echo "<br><span class=\"big\">Run Time: </span>".$movielist[$i]['runTime'];
