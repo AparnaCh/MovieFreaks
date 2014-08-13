@@ -85,9 +85,9 @@ while ($zip = $result1->fetch_row()){
   $query5 = "SELECT phone FROM registered_users WHERE zipcode = $zip[0] AND newmoviealert = 'yes'"; 
   $result5 = mysqli_query($con, $query5);
 
-  $user = "AparnaG";
-  $password = "NUCXXPYZYdVeGA";
-  $api_id = "3491322";
+  $user = "username";
+  $password = "password";
+  $api_id = "apikey";
   $baseurl ="http://api.clickatell.com";
 
   $curtime = date('Y-m-d h:i:s');   
@@ -110,7 +110,7 @@ while ($zip = $result1->fetch_row()){
         if ($sess[0] == "OK") {
  
            $sess_id = trim($sess[1]); // remove any whitespace
-           $url = "$baseurl/http/sendmsg?session_id=$sess_id&MO=1&from=14698285560&to=$to&text=$text";
+           $url = "$baseurl/http/sendmsg?session_id=$sess_id&MO=1&from=yourclickatellnumber&to=$to&text=$text";
  
            // do sendmsg call
            $ret = file($url);
