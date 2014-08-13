@@ -22,8 +22,8 @@ https://github.com/AparnaCh/MovieFreaks/blob/master/LICENSE
  1. https://www.google.com/
  2. http://stackoverflow.com/
  3. http://www.w3schools.com/
- 4. http://www.tmsdatadirect.com/
- 5. https://www.clickatell.com/a
+ 4. https://www.clickatell.com/
+ 5. http://www.tmsdatadirect.com/
  
  * Icons are freely downloadable from: http://www.freestockphotos.biz/
  * Images for web page design: http://www.in.com/downloads/wallpapers-movies-recently_added-9-1.html
