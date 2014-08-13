@@ -1,3 +1,19 @@
+<!-- ********************************************************************************************
+ * Copyright (C) 2014 Aparna Chandrasekar
+ *
+ * This program is free software: you can redistribute it and/or modify it under 
+ * the terms of the GNU General Public License as published by the Free Software Foundation, 
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program. 
+ * If not, see http://www.gnu.org/licenses/.
+ *
+ *  ******************************************************************************************/ -->
+
 <?php 
     include('Validation.php');
     function selected($blood_group, $choice) {
@@ -7,14 +23,14 @@
     function selectDate() {
      //month
 	$months = array("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-	$html = "<select name=\"month\">";
+	$html = "<select class=\"dob\" name=\"month\">";
 	for($i=1;$i<=12;$i++)
     		{
 	       $html .= "<option value='$i'>$months[$i]</option>";
 	     }
     	$html .= "</select>";
      //day
-	$html.="<select name=\"day\">";
+	$html.="<select class=\"dob\" name=\"day\">";
      for($i=1;$i<=31;$i++)
     		{
       	  $html.="<option value='$i'>$i</option>";
@@ -23,7 +39,7 @@
      //year
      $startyear = date("Y")-100;
      $endyear=date("Y")+50;
-     $html.="<select name=\"year\">";
+     $html.="<select class=\"dob\" name=\"year\">";
      for($i=$startyear;$i<=$endyear;$i++)
     		{      
      		  $html.="<option value='$i'>$i</option>";
@@ -47,7 +63,7 @@
 		    border: 0px solid #197575;
 	        }
 	   div.header {
-		    background:url(http://thumbs.dreamstime.com/z/red-christmas-background-shiny-stars-35348908.jpg);
+		    background:img.jpg;
       	    text-align:center;
 		    width:100%;
 		    top:0px;
@@ -146,6 +162,10 @@
 		 background-color:#E0E0D1;
 		 width:180px;
 	   }
+	   select.dob {
+		 border-radius:7px;
+		 background-color:#E0E0D1;
+	   }
 	   input[type=password] {
 		 border-radius:7px;
 		 background-color:#E0E0D1;
@@ -183,11 +203,11 @@
 	<div class="tab">
 	     <table style="align:center;margin:auto;text-align:center;">
 		  <tr>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/movies.php">Movies</a></td>
-	     	     <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/theatres.php">Theatres</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/search.php">Search</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/register.php">Register</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/about.php">About Us</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/movies.php">Movies</a></td>
+	     	     <td class="tabs"><a class="tabs" href="http://localhost/Movies/theatres.php">Theatres</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/search.php">Search</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/register.php">Register</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/about.php">About Us</a></td>
 		  </tr>
 	     </table>
 	</div>
@@ -200,7 +220,7 @@
 		 <font class="scrolltext">Entertainment Unlimited!</font><p>
 		 <font class="scrolltext">Never miss a movie</font><p>
 		 <marquee behavior="alternate" scrollamount="10" direction="up" height="23px"><center>       
-		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost:8000/Movies/register.php">REGISTER NOW!!</a></font><br>
+		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost/Movies/register.php">REGISTER NOW!!</a></font><br>
 		 </center></marquee>
 		 <font class="scrolltext">And receive SMS Alerts on new movies</font><p>
 		 <font class="scrolltext">Find your favorite movies in theatres near you</font><p>
