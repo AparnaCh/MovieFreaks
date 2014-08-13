@@ -1,7 +1,23 @@
+<!-- ********************************************************************************************
+ * Copyright (C) 2014 Aparna Chandrasekar
+ *
+ * This program is free software: you can redistribute it and/or modify it under 
+ * the terms of the GNU General Public License as published by the Free Software Foundation, 
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program. 
+ * If not, see http://www.gnu.org/licenses/.
+ *
+ *  ******************************************************************************************/ -->
+
 <?php
 
 //Connection to database
-$con = mysqli_connect("localhost","root" ,"","movies");
+$con = mysqli_connect("localhost","username" ,"password","database");
 if (!$con){     
   die('Could not connect: ' . mysql_error());     
 } 
@@ -21,7 +37,7 @@ while ($zip = $result1->fetch_row()){
   date_default_timezone_set('America/Los_Angeles');
   $startdate = date('Y-m-d');
   echo "<br>Date is ". $startdate;
-  $request = "http://data.tmsapi.com/v1/movies/showings?startDate=".$startdate."&zip=".$zip[0]."&api_key=nmt7c4p2mvcb3bxq5qkq5zcb";
+  $request = "http://data.tmsapi.com/v1/movies/showings?startDate=".$startdate."&zip=".$zip[0]."&api_key=yourapikey";
   $response  = file_get_contents($request);
   $movielist = json_decode($response,true);                               
   $arrlen = sizeof($movielist);
@@ -69,9 +85,9 @@ while ($zip = $result1->fetch_row()){
   $query5 = "SELECT phone FROM registered_users WHERE zipcode = $zip[0] AND newmoviealert = 'yes'"; 
   $result5 = mysqli_query($con, $query5);
 
-  $user = "AparnaG";
-  $password = "NUCXXPYZYdVeGA";
-  $api_id = "3491322";
+  $user = "username";
+  $password = "password";
+  $api_id = "apikey";
   $baseurl ="http://api.clickatell.com";
 
   $curtime = date('Y-m-d h:i:s');   
@@ -94,7 +110,7 @@ while ($zip = $result1->fetch_row()){
         if ($sess[0] == "OK") {
  
            $sess_id = trim($sess[1]); // remove any whitespace
-           $url = "$baseurl/http/sendmsg?session_id=$sess_id&MO=1&from=14698285560&to=$to&text=$text";
+           $url = "$baseurl/http/sendmsg?session_id=$sess_id&MO=1&from=yourclickatellnumber&to=$to&text=$text";
  
            // do sendmsg call
            $ret = file($url);

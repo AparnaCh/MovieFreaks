@@ -1,3 +1,18 @@
+<!-- ********************************************************************************************
+ * Copyright (C) 2014 Aparna Chandrasekar
+ *
+ * This program is free software: you can redistribute it and/or modify it under 
+ * the terms of the GNU General Public License as published by the Free Software Foundation, 
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program. 
+ * If not, see http://www.gnu.org/licenses/.
+ *
+ *  ******************************************************************************************/ -->
 <html>
 	<head>
 		<title> MovieFreaks </title>
@@ -11,8 +26,8 @@
 		    border: 0px solid #197575;
 	        }
 	        div.header {
-		    background:url(http://thumbs.dreamstime.com/z/red-christmas-background-shiny-stars-35348908.jpg);
-      	    text-align:center;
+		    background:img.jpg;
+      	            text-align:center;
 		    width:100%;
 		    top:0px;
 		    left:0px;
@@ -132,11 +147,11 @@
 	<div class="tab">
 	     <table style="margin:auto;text-align:center;">
 		  <tr>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/movies.php">Movies</a></td>
-	     	     <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/theatres.php">Theatres</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/search.php">Search</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/register.php">Register</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/about.php">About Us</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/movies.php">Movies</a></td>
+	     	     <td class="tabs"><a class="tabs" href="http://localhost/Movies/theatres.php">Theatres</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/search.php">Search</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/register.php">Register</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/about.php">About Us</a></td>
 		  </tr>
 	     </table>
 	</div>
@@ -148,7 +163,7 @@
 		 <font class="scrolltext">Entertainment Unlimited!</font><p>
 		 <font class="scrolltext">Never miss a movie</font><p>
 		 <marquee behavior="alternate" scrollamount="10" direction="up" height="23px"><center>       
-		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost:8000/Movies/register.php">REGISTER NOW!!</a></font><br>
+		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost/Movies/register.php">REGISTER NOW!!</a></font><br>
 		 </center></marquee>
 		 <font class="scrolltext">And receive SMS Alerts on new movies</font><p>
 		 <font class="scrolltext">Find your favorite movies in theatres near you</font><p>
@@ -159,7 +174,7 @@
  
      <div class="content">
  	<p><font style="font-weight:bold;font-size:20pt;">About MovieFreaks</font></p>
- 	<p><span><font style="font-weight:bold;">MovieFreaks</font></span> offers its users with the list of movies running in theatres near them. It also provides a short description of the movies, its show times, release date, ratings and various other details about the movies. The users can also find the theatres in their locality and also search for a movie by entering a keyword. It allows users to buy movie tickets online by redirecting to fandango’s website for their favorite movie in their nearby theatres.</p>
+ 	<p><span><font style="font-weight:bold;">MovieFreaks</font></span> offers its users with the list of movies running in theatres near them. It also provides a short description of the movies, its show times, release date, ratings and various other details about the movies. The users can also find the theatres in their locality and also search for a movie by entering a keyword. It allows users to buy movie tickets online by redirecting to fandangoâ€™s website for their favorite movie in their nearby theatres.</p>
  	<p><span><font style="font-weight:bold;">MovieFreaks</font></span> offers its registered users an exciting opportunity to know about the movie releases in their local theatres by sending an SMS alert to their mobile.</p>
 	<ul>
 	<li>To receive new movie alerts, please <a href="http://localhost:8000/Movies/register.php">register</a></li>
@@ -193,7 +208,7 @@
 				$password = md5($_POST['password']);
 
 	   			//Connect to database
-     			     $con = mysqli_connect("localhost","root" ,"","movies");
+     			     $con = mysqli_connect("localhost","username" ,"password","database");
         			if (!$con){     
 					die('Could not connect: ' . mysql_error());     
 		      	}     
