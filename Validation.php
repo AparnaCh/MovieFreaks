@@ -1,3 +1,19 @@
+<!-- ********************************************************************************************
+ * Copyright (C) 2014 Aparna Chandrasekar
+ *
+ * This program is free software: you can redistribute it and/or modify it under 
+ * the terms of the GNU General Public License as published by the Free Software Foundation, 
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program. 
+ * If not, see http://www.gnu.org/licenses/.
+ *
+ *  ******************************************************************************************/ -->
+
 <?php
  
 $error = ""; // Initialize error as blank
@@ -22,7 +38,7 @@ if (isset($_POST['submit'])) { // check if the form is submitted
 
 	   //Connect to database
 
-        $con = mysqli_connect("localhost","root" ,"","movies");
+        $con = mysqli_connect("localhost","username" ,"password","database");
         if (!$con)     
         {     
 		die('Could not connect: ' . mysql_error());     
@@ -129,7 +145,7 @@ if (isset($_POST['submit'])) { // check if the form is submitted
 	      $cnt = $result->fetch_row();
 	      if ($cnt[0] == 0){
                $startdate = date('Y-m-d');
-               $request = "http://data.tmsapi.com/v1/movies/showings?startDate=".$startdate."&zip=".$zipcode."&api_key=nmt7c4p2mvcb3bxq5qkq5zcb";
+               $request = "http://data.tmsapi.com/v1/movies/showings?startDate=".$startdate."&zip=".$zipcode."&api_key=yourapikey";
                $response  = @file_get_contents($request);
 		    if ($response === FALSE){
 			   $error .= 'Zip code does not exist!<br>';
