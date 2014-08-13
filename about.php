@@ -147,11 +147,11 @@
 	<div class="tab">
 	     <table style="margin:auto;text-align:center;">
 		  <tr>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/movies.php">Movies</a></td>
-	     	     <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/theatres.php">Theatres</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/search.php">Search</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/register.php">Register</a></td>
-	          <td class="tabs"><a class="tabs" href="http://localhost:8000/Movies/about.php">About Us</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/movies.php">Movies</a></td>
+	     	     <td class="tabs"><a class="tabs" href="http://localhost/Movies/theatres.php">Theatres</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/search.php">Search</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/register.php">Register</a></td>
+	          <td class="tabs"><a class="tabs" href="http://localhost/Movies/about.php">About Us</a></td>
 		  </tr>
 	     </table>
 	</div>
@@ -163,7 +163,7 @@
 		 <font class="scrolltext">Entertainment Unlimited!</font><p>
 		 <font class="scrolltext">Never miss a movie</font><p>
 		 <marquee behavior="alternate" scrollamount="10" direction="up" height="23px"><center>       
-		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost:8000/Movies/register.php">REGISTER NOW!!</a></font><br>
+		 <font class="scrolltext"><a style="text-decoration:none;color:#FF3399;text-shadow:3px 3px 3px #D63385;" href="http://localhost/Movies/register.php">REGISTER NOW!!</a></font><br>
 		 </center></marquee>
 		 <font class="scrolltext">And receive SMS Alerts on new movies</font><p>
 		 <font class="scrolltext">Find your favorite movies in theatres near you</font><p>
