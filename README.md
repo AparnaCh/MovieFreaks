@@ -5,7 +5,7 @@ Copyright (C) 2014 Aparna Chandrasekar
 
 MovieFreaks is a web application that allows its registered users to receive SMS alerts on release of a new movie. The users can also search for their favorite movies and theatres in their locality.
 
-Coding was done in HTML, PHP and javascript .
+Coding was done in HTML, PHP and javascript.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation,either version 3 of the License, or (at your option) any later version.
  
@@ -32,3 +32,32 @@ https://github.com/AparnaCh/MovieFreaks/blob/master/LICENSE
 
 Author - Aparna Chandrasekar 
 Email: caparna@pdx.edu
+
+**********************************************************************
+Name
+======
+Aparna Chandrasekar
+
+Project Name
+============
+MovieFreaks
+
+Contact Information
+=================
+caparna@pdx.edu
+
+Project Description
+================
+MovieFreaks is a web application that allows its registered users to receive SMS alerts on release of a new movie. The users can also search for their favorite movies and theatres in their locality.
+
+The application was developed using Wamp Server - Apache 2.4.9, MySQL 5.6.17(phpMyAdmin), PHP 5.5.12, HTML and Javascript
+
+License Information
+================
+Please check the below link to get the file license in this distribution.
+Link :  https://github.com/AparnaCh/MovieFreaks/blob/master/LICENSE
+
+Source Code
+=========
+The source code can be found at - https://github.com/AparnaCh/MovieFreaks
+
