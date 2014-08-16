@@ -26,8 +26,8 @@ https://github.com/AparnaCh/MovieFreaks/blob/master/LICENSE
  5. http://www.tmsdatadirect.com/
  
  * Icons are freely downloadable from: http://www.freestockphotos.biz/
- * Images for web page design: http://www.in.com/downloads/wallpapers-movies-recently_added-9-1.html
  * Image slideshow: http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+ * Alert box style: http://jqueryui.com
 
 
 Author - Aparna Chandrasekar 
@@ -72,3 +72,8 @@ User Manual
 ============
 User Manual is available at 
 https://github.com/AparnaCh/MovieFreaks/tree/master/Docs/UserManual.pdf
+
+Presentation Slides
+===================
+Presentation slides are available at 
+https://github.com/AparnaCh/MovieFreaks/tree/master/Docs/MovieFreaks.pptx
